@@ -200,7 +200,6 @@ function clinicfinder_views_views_default_views() {
   $handler->display->display_options['filters']['field_medical_scheme_tid']['field'] = 'field_medical_scheme_tid';
   $handler->display->display_options['filters']['field_medical_scheme_tid']['exposed'] = TRUE;
   $handler->display->display_options['filters']['field_medical_scheme_tid']['expose']['operator_id'] = 'field_medical_scheme_tid_op';
-  $handler->display->display_options['filters']['field_medical_scheme_tid']['expose']['label'] = 'Medical scheme';
   $handler->display->display_options['filters']['field_medical_scheme_tid']['expose']['operator'] = 'field_medical_scheme_tid_op';
   $handler->display->display_options['filters']['field_medical_scheme_tid']['expose']['identifier'] = 'field_medical_scheme_tid';
   $handler->display->display_options['filters']['field_medical_scheme_tid']['expose']['remember_roles'] = array(
