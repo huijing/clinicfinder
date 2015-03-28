@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the clinicfinder_views feature.
+ */
+
+include_once 'clinicfinder_views.features.inc';
