@@ -94,6 +94,7 @@ function clinicfinder_clinics_ds_layout_settings_info() {
         5 => 'field_public_holidays',
         6 => 'field_nearest_mrt',
         7 => 'field_by_bus',
+        8 => 'field_phone',
       ),
     ),
     'fields' => array(
@@ -105,6 +106,7 @@ function clinicfinder_clinics_ds_layout_settings_info() {
       'field_public_holidays' => 'ds_content',
       'field_nearest_mrt' => 'ds_content',
       'field_by_bus' => 'ds_content',
+      'field_phone' => 'ds_content',
     ),
     'classes' => array(),
     'wrappers' => array(

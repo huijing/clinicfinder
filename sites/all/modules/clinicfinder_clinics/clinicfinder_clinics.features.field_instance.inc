@@ -129,7 +129,7 @@ function clinicfinder_clinics_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 17,
+        'weight' => 7,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -284,6 +284,49 @@ function clinicfinder_clinics_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-clinic-field_phone'
+  $field_instances['node-clinic-field_phone'] = array(
+    'bundle' => 'clinic',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Enter the phone number of the clinic.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'phone',
+        'settings' => array(),
+        'type' => 'phone',
+        'weight' => 8,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'node',
+    'field_name' => 'field_phone',
+    'label' => 'Phone',
+    'required' => 0,
+    'settings' => array(
+      'ca_phone_parentheses' => 1,
+      'ca_phone_separator' => '-',
+      'phone_country_code' => 0,
+      'phone_default_country_code' => 1,
+      'phone_int_max_length' => 15,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'phone',
+      'settings' => array(),
+      'type' => 'phone_textfield',
+      'weight' => 9,
+    ),
+  );
+
   // Exported field_instance: 'node-clinic-field_position'
   $field_instances['node-clinic-field_position'] = array(
     'bundle' => 'clinic',
@@ -294,7 +337,7 @@ function clinicfinder_clinics_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 16,
+        'weight' => 17,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -387,6 +430,7 @@ function clinicfinder_clinics_field_default_field_instances() {
   t('Enter the address of the clinic.');
   t('Enter the buses people can take to reach this clinic.');
   t('Enter the nearest MRT station. This field will autocomplete.');
+  t('Enter the phone number of the clinic.');
   t('Image');
   t('Indicate if the clinic has 24-hour service.');
   t('Indicate if the clinic opens on Public Holidays.');
@@ -394,6 +438,7 @@ function clinicfinder_clinics_field_default_field_instances() {
   t('Nearest MRT');
   t('Open 24 hours?');
   t('Open on Public Holidays?');
+  t('Phone');
   t('Position');
   t('Select the medical schemes this clinic supports.');
   t('Upload images of the clinic, if available.');
