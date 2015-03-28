@@ -23,10 +23,14 @@ textarea:focus {
 
 input[type=submit] {
   margin: 0;
-  padding: rhythm(0.5);
-  background-color: color(mine-shaft);
-  border-top: 2px solid transparent;
-  border-bottom: 2px solid transparent;
+  padding: rhythm(0.5) rhythm(1);
+  background-color: color(pacific-blue);
+  border-radius: 10px;
+  color: white;
+  transition: background-color ease-out 0.2s;
+  &:hover {
+    background-color: darken(color(pacific-blue), 10%);
+  }
 }
 
 //Checkbox styling

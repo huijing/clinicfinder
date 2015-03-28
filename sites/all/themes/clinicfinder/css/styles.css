@@ -533,7 +533,7 @@ p {
 input[type=text]:not([type=submit]),
 input[type=email],
 input[type=password] {
-  border: 3px solid;
+  border: 3px solid #f2f2f2;
   outline: 0;
   height: 3.157em;
   line-height: 1.5785em;
@@ -544,7 +544,7 @@ input[type=password] {
 textarea,
 textarea:hover,
 textarea:focus {
-  border: 3px solid;
+  border: 3px solid #f2f2f2;
   outline: 0;
   width: 100%;
   padding-left: 10px;
@@ -552,9 +552,14 @@ textarea:focus {
 
 input[type=submit] {
   margin: 0;
-  padding: 0.75rem;
-  border-top: 2px solid transparent;
-  border-bottom: 2px solid transparent; }
+  padding: 0.75rem 1.5rem;
+  background-color: #04afbf;
+  border-radius: 10px;
+  color: white;
+  -webkit-transition: background-color ease-out 0.2s;
+          transition: background-color ease-out 0.2s; }
+  input[type=submit]:hover {
+    background-color: #03818d; }
 
 .form-type-bef-checkbox input[type=checkbox] {
   position: absolute;
@@ -589,4 +594,14 @@ input[type=submit] {
   user-select: none; }
 
 input::-ms-clear {
+  display: none; }
+
+.front label[for=edit-field-geofield-distance],
+.front .form-item-field-geofield-distance-distance,
+.front .edit-field-geofield-distance-distance,
+.front .geofield-proximity-origin-from,
+.front .form-item-field-geofield-distance-unit,
+.front .edit-field-geofield-distance-unit,
+.front .views-widget-filter-field_24_hours_value,
+.front .views-widget-filter-field_public_holidays_value {
   display: none; }

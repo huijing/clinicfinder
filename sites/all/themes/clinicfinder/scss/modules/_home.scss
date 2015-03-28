@@ -1,0 +1,12 @@
+.front {
+  label[for=edit-field-geofield-distance],
+  .form-item-field-geofield-distance-distance,
+  .edit-field-geofield-distance-distance,
+  .geofield-proximity-origin-from,
+  .form-item-field-geofield-distance-unit,
+  .edit-field-geofield-distance-unit,
+  .views-widget-filter-field_24_hours_value,
+  .views-widget-filter-field_public_holidays_value {
+    display: none;
+  }
+}
