@@ -6,7 +6,8 @@
   .form-item-field-geofield-distance-unit,
   .edit-field-geofield-distance-unit,
   .views-widget-filter-field_24_hours_value,
-  .views-widget-filter-field_public_holidays_value {
+  .views-widget-filter-field_public_holidays_value,
+  label[for="edit-field-medical-scheme-tid"] {
     display: none;
   }
 }
