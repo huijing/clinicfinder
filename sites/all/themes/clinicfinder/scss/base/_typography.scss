@@ -1,0 +1,71 @@
+// ==========
+// TYPOGRAPHY BASE
+// -----
+// This file sets the typography for the rest of the document.
+// You should only include font properties in this file.
+// If your typography changes in size when the breakpoint
+// changes, you should include these changes right here in this
+// document.
+// ==========
+
+// Establishes baseline with Compass Vertical.
+@include establish-baseline;
+$grid-background-baseline-height: $base-line-height;
+
+// Standardise site-wide typography styles here. Refer to _variables.scss to edit the variables used in the type-scale mixin.
+%h1, h1 {
+  @include responsive-text-size(kilo);
+}
+
+%h2, h2 {
+  @include responsive-text-size(hecto);
+}
+
+%h3, h3 {
+  @include responsive-text-size(deca);
+}
+
+%h4, h4 {
+  @include responsive-text-size(base);
+}
+
+%h5, h5 {
+  @include responsive-text-size(base);
+}
+
+%h6, h6 {
+  @include responsive-text-size(base);
+}
+
+strong {
+  font-weight: 700;
+}
+
+em {
+  font-style: italic;
+}
+
+pre,
+code {
+  @include responsive-text-size(base);
+}
+
+strong {
+  font-weight: 700;
+}
+
+em {
+  font-style: italic;
+}
+
+pre {
+  white-space: pre;
+}
+
+code {
+  overflow: hidden;
+}
+
+p {
+  margin-bottom: rhythm(1);
+}

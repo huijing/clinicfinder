@@ -1,0 +1,132 @@
+// ==========
+// SASS VARIABLES
+// -----
+// Declare all the variables which will be used in your theme here.
+// Feel free to change the variable values and add your own variables
+// to this file as well.
+// ==========
+
+// ==========
+// DEFAULT TYPOGRAPHY SETTINGS - The default settings for this projects are:
+// ==========
+
+// Imported fonts. 
+
+// Base font stacks
+$base-font: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+$header-font:'';
+$code-font:'';
+
+// Base font sizes and line heights
+$base-font-size: 16px;
+$base-line-height: 24px;
+$round-to-nearest-half-line: true;
+
+// Uses the `rem` unit for all vertical rhythm output
+$rhythm-unit: "rem";
+
+// ==========
+// Sets Typograhy sizes
+// -----
+// Adjust the font-sizes as required. Base-lines are a multiple of the $base-line-height 
+// variable defined on line 22 above.
+// Referenced from https://medium.com/p/8e51498c3713
+// ==========
+
+// Set typography sizes
+$text-sizing: (
+  deci: (
+    small: (
+      font-size: 0.8rem
+    )
+  ),
+  base: (
+    small: (
+      font-size: 0.8rem
+    ),
+    medium: (
+      font-size: 1rem
+    )
+  ),
+  deca: (
+    small: (
+      font-size: 1rem
+    ),
+    medium: (
+      font-size: 1.294rem
+    )
+  ),
+  hecto: (
+    small: (
+      font-size: 1.294rem
+    ),
+    medium: (
+      font-size: 1.618rem
+    ),
+  ),
+  kilo: (
+    small: (
+      font-size: 1.618rem
+    ),
+    medium: (
+      font-size: 2.094rem
+    ),
+  ),
+  mega: (
+    small: (
+      font-size: 2.094rem
+    ),
+    medium: (
+      font-size: 2.618rem
+    ),
+  ) 
+);
+
+// ==========
+// BREAKPOINTS
+// -----
+// Sass map for breakpoints. You can add additional breakpoints to this map 
+// or change their variable names.
+//
+// USAGE:
+// -----
+// @include respond-above(small) {
+//   .test {
+//     css-property: value;
+//   }
+// }
+// ==========
+  
+$breakpoints: (
+  small:    575px,
+  medium:   720px,
+  large:    820px,
+  x-large:  960px
+);
+
+// ==========
+// COLORS
+// -----
+// This file is for you to set up all colors that are used in your
+// project.
+
+// USAGE:
+// -----
+// .test {
+//   background-color: color(color-name);
+// }
+// ==========
+
+$colors: (
+
+);
+
+// ==========
+// Z-INDEX
+// -----
+// Set variables for Z-index.
+// ==========
+$zindex: (
+  modal     : 90,
+  overlay   : 80
+);

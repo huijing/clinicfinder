@@ -1,0 +1,23 @@
+name        = Clinic Finder
+description = Custom theme for the Clinic Finder app.
+
+core        = 7.x
+engine      = phptemplate
+
+stylesheets[all][] = css/styles.css
+
+;scripts[] = 
+
+regions[header] = Header
+regions[content] = Content
+regions[footer] = Footer
+
+settings[toggle_logo] = 1
+settings[toggle_name] = 0
+settings[toggle_slogan] = 0
+settings[toggle_node_user_picture] = 0
+settings[toggle_favicon] = 0
+settings[toggle_main_menu] = 1
+settings[toggle_secondary_menu] = 0
+
+;plugins[panels][layouts] = layouts

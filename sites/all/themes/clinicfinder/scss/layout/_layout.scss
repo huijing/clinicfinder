@@ -1,0 +1,21 @@
+//This is an example of a three column layout with 2 sidebars
+// .site-main {
+//   @include container(1140px);  
+// }
+
+// .content {
+//   width: span(8 of 12);
+//   @include isolate(3 of 12);
+// }
+
+// .sidebar {
+//   width: span(2 of 12);
+// }
+
+// .sidebar--first {
+//   @include isolate(0);
+// }
+
+// .sidebar--second {
+//   @include isolate(11 of 12);
+// }
