@@ -1,0 +1,17 @@
+<?php
+// $Id$
+/**
+ * @file
+ */
+
+//Add placeholder attribute to search boxes
+function custom_form_alter(&$form, &$form_state, $form_id) {
+  if($form_id == "views_exposed_form") {
+    if (isset($form['field_geofield_distance'])) {
+      $form['field_geofield_distance']['#origin_options']['#attributes'] = array('placeholder' => array(t('Enter Postal Code/Street Name')));
+    }
+    if (isset($form['field_medical_scheme_tid'])) {
+      $form['field_medical_scheme_tid']['#options']['All'] = t('Medical Scheme');
+    }
+  }
+}

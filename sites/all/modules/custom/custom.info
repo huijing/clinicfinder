@@ -1,0 +1,7 @@
+; $Id$
+name = Clinic Finder tweaks
+description = Custom tweaks for Clinic Finder
+core = 7.x
+package = "Clinic Finder"
+
+version = "7.x-1.0-alpha1"
