@@ -6,10 +6,13 @@ input[type=password] {
   outline: 0; 
   height: 3.157em;
   line-height: 1.5785em; 
-  width: auto; 
+  width: 100%; 
   padding-left: 10px; 
   padding-right: 10px;
   border-radius: 10px;
+  @include respond-above(large) {
+    width: auto;
+  }
 }
 
 textarea,
@@ -24,7 +27,7 @@ textarea:focus {
 
 input[type=submit] {
   margin: 0;
-  padding: rhythm(0.5) rhythm(2);
+  padding: rhythm(0.65) rhythm(2);
   background-color: color(pacific-blue);
   border-radius: 10px;
   color: white;

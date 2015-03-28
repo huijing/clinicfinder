@@ -1,0 +1,36 @@
+.view-display-id-clinics {
+  position: relative;
+  height: 100vh;
+  &> .view-content {
+    width: 320px;
+    height: 100vh;
+    overflow-y: scroll;
+    position: absolute;
+  }
+  &> .item-list {
+    width: 300px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: white;
+    padding: rhythm(0.5) 0;
+  }
+  .attachment {
+    width: calc(100% - 320px);
+    float: right;
+  }
+}
+
+#ip-geoloc-map-of-view-clincs-clinic_map-7843f2d4b36a59915f1e8af69b80be71 {
+  height: 100vh !important;
+}
+
+input#edit-field-geofield-distance-distance {
+  width: 50px;
+}
+
+.leaflet-popup {
+  .addressfield-container-inline {
+    display: none;
+  }
+}

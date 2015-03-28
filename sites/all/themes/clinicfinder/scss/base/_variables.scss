@@ -50,18 +50,18 @@ $text-sizing: (
   ),
   deca: (
     small: (
-      font-size: 1rem
+      font-size: 16px
     ),
     medium: (
-      font-size: 1.294rem
+      font-size: 18px
     )
   ),
   hecto: (
     small: (
-      font-size: 1.294rem
+      font-size: 18px
     ),
     medium: (
-      font-size: 1.618rem
+      font-size: 20px
     ),
   ),
   kilo: (
@@ -100,8 +100,8 @@ $text-sizing: (
 $breakpoints: (
   small:    575px,
   medium:   720px,
-  large:    820px,
-  x-large:  960px
+  large:    980px,
+  x-large:  1280px
 );
 
 // ==========

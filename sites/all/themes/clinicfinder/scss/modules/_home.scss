@@ -10,4 +10,32 @@
   label[for="edit-field-medical-scheme-tid"] {
     display: none;
   }
+  .form-item.form-type-geofield-proximity {
+    margin: 0;
+  }
+  .site-main {
+    background: url('../img/homepage-bg.jpg');
+    background-size: cover;
+    background-position: 50% 50%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .views-exposed-form {
+    padding: 0 rhythm(1);
+    @include respond-above(large) {
+      width: 975px;
+    }
+  }
+  .geofield-proximity-field-wrapper .form-item {
+    width: 100%;
+  }
+  .views-widget-filter-field_geofield_distance {
+    width: 100%;
+  }
+  .views-exposed-form .views-exposed-widget .form-submit {
+    margin-top: 0;
+  }
 }

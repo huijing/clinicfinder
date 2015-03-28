@@ -436,16 +436,16 @@ h1 {
       line-height: 3rem; } }
 
 h2 {
-  font-size: 21px;
-  font-size: 1.294rem;
-  line-height: 36px;
-  line-height: 2.25rem; }
+  font-size: 18px;
+  font-size: 1.125rem;
+  line-height: 24px;
+  line-height: 1.5rem; }
   @media screen and (min-width: 720px) {
     h2 {
-      font-size: 26px;
-      font-size: 1.618rem;
-      line-height: 36px;
-      line-height: 2.25rem; } }
+      font-size: 20px;
+      font-size: 1.25rem;
+      line-height: 24px;
+      line-height: 1.5rem; } }
 
 h3 {
   font-size: 16px;
@@ -454,10 +454,10 @@ h3 {
   line-height: 1.5rem; }
   @media screen and (min-width: 720px) {
     h3 {
-      font-size: 21px;
-      font-size: 1.294rem;
-      line-height: 36px;
-      line-height: 2.25rem; } }
+      font-size: 18px;
+      font-size: 1.125rem;
+      line-height: 24px;
+      line-height: 1.5rem; } }
 
 h4 {
   font-size: 13px;
@@ -537,10 +537,15 @@ input[type=password] {
   outline: 0;
   height: 3.157em;
   line-height: 1.5785em;
-  width: auto;
+  width: 100%;
   padding-left: 10px;
   padding-right: 10px;
   border-radius: 10px; }
+  @media screen and (min-width: 980px) {
+    input[type=text]:not([type=submit]),
+    input[type=email],
+    input[type=password] {
+      width: auto; } }
 
 textarea,
 textarea:hover,
@@ -553,7 +558,7 @@ textarea:focus {
 
 input[type=submit] {
   margin: 0;
-  padding: 0.75rem 3rem;
+  padding: 0.975rem 3rem;
   background-color: #04afbf;
   border-radius: 10px;
   color: white;
@@ -607,6 +612,37 @@ input::-ms-clear {
 .front .views-widget-filter-field_public_holidays_value,
 .front label[for="edit-field-medical-scheme-tid"] {
   display: none; }
+.front .form-item.form-type-geofield-proximity {
+  margin: 0; }
+.front .site-main {
+  background: url("../img/homepage-bg.jpg");
+  background-size: cover;
+  background-position: 50% 50%;
+  height: 100vh;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center; }
+.front .views-exposed-form {
+  padding: 0 1.5rem; }
+  @media screen and (min-width: 980px) {
+    .front .views-exposed-form {
+      width: 975px; } }
+.front .geofield-proximity-field-wrapper .form-item {
+  width: 100%; }
+.front .views-widget-filter-field_geofield_distance {
+  width: 100%; }
+.front .views-exposed-form .views-exposed-widget .form-submit {
+  margin-top: 0; }
 
 .dk-select,
 .dk-select *,
@@ -637,7 +673,7 @@ input::-ms-clear {
   background-color: white;
   border: 3px solid #f2f2f2;
   border-radius: 10px;
-  padding: 0.7em 2.6em 0.7em 1em;
+  padding: 0.8em 2.6em 0.8em 1em;
   text-overflow: ellipsis;
   text-shadow: #fff 1px 1px 0;
   -webkit-transition: border-color .5s;
@@ -794,4 +830,32 @@ input::-ms-clear {
   border-left-color: inherit; }
 
 select[data-dkcacheid] {
+  display: none; }
+
+.view-display-id-clinics {
+  position: relative;
+  height: 100vh; }
+  .view-display-id-clinics > .view-content {
+    width: 320px;
+    height: 100vh;
+    overflow-y: scroll;
+    position: absolute; }
+  .view-display-id-clinics > .item-list {
+    width: 300px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: white;
+    padding: 0.75rem 0; }
+  .view-display-id-clinics .attachment {
+    width: calc(100% - 320px);
+    float: right; }
+
+#ip-geoloc-map-of-view-clincs-clinic_map-7843f2d4b36a59915f1e8af69b80be71 {
+  height: 100vh !important; }
+
+input#edit-field-geofield-distance-distance {
+  width: 50px; }
+
+.leaflet-popup .addressfield-container-inline {
   display: none; }
