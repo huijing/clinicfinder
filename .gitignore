@@ -48,3 +48,4 @@ Thumbs.db
 ##########
 .sass-cache
 config.codekit
+sites/all/modules/devel
