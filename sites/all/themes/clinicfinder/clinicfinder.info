@@ -6,7 +6,7 @@ engine      = phptemplate
 
 stylesheets[all][] = css/styles.css
 
-;scripts[] = 
+scripts[] = js/script.js
 
 regions[header] = Header
 regions[content] = Content

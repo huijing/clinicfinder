@@ -1,0 +1,10 @@
+/**
+ * @file
+ * Display Suite Two Column Stacked 66-34 stylesheet.
+ */
+.ds-top {
+  margin-bottom: 1.5rem; }
+
+.ds-bottom {
+  margin-bottom: 1.5rem;
+  clear: both; }

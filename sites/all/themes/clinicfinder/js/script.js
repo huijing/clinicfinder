@@ -6,15 +6,14 @@
  * the README.txt next to this file.
  */
 
-(function ($, Drupal, window, document, undefined) {
+(function ($) {
+  // Toggle for more clinic information
+  $(document).ready(function() {
+    $('.view-display-id-clinics .ds-bottom').hide();
+    $( ".view-display-id-clinics .ds-top" ).append( "<p id='toggle'>More</p>" );
 
-Drupal.behaviors.my_custom_behavior = {
-  attach: function(context, settings) {
-
-    // Place your code here.
-
-  }
-};
-
-
-})(jQuery, Drupal, this, this.document);
+    $('#toggle').bind('click',function(){
+      $(this).parent().next().toggleClass('reveal');
+    });
+  });
+})(jQuery);

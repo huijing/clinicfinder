@@ -6,6 +6,7 @@
     height: 100vh;
     overflow-y: scroll;
     position: absolute;
+    padding: 0 rhythm(0.5);
   }
   &> .item-list {
     width: 300px;
@@ -19,18 +20,122 @@
     width: calc(100% - 320px);
     float: right;
   }
+  .views-row {
+    @include cf;
+    border-bottom: 1px dashed gray;
+    padding-bottom: rhythm(0.5);
+    margin-bottom: rhythm(0.5);
+    .field {
+      margin-bottom: rhythm(0.25);
+    }
+  }
+  .field-name-field-medical-scheme .field-label {
+    @include image-replacement;
+    height: 32px;
+    width: 32px;
+    display: inline-block;
+    background-image: url('../img/medicalscheme.png');
+    background-size: cover;
+    margin-right: 5px;
+  }
+  .field-name-field-medical-scheme .field-item {
+    display: inline-block;
+    border: 1px solid gray;
+    padding: 1px;
+    margin-right: 7px;
+    margin-bottom: 7px;
+    padding: 0 3px;
+    color: gray;
+    font-size: 12px;
+  }
+  .field-name-field-medical-scheme .field-items {
+    float: none;
+  }
+  .field-name-field-24-hours {
+    float: left;
+    margin-right: 5px;
+    .field-label {
+      @include image-replacement;
+      height: 18px;
+      width: 24px;
+      display: inline-block;
+      background-image: url('../img/check.png');
+      background-size: cover;
+      margin-right: 5px;
+    }
+  }
+  .field-name-field-public-holidays {
+    float: left;
+    .field-label {
+      @include image-replacement;
+      height: 18px;
+      width: 24px;
+      display: inline-block;
+      background-image: url('../img/check.png');
+      background-size: cover;
+      margin-right: 5px;
+    }
+  }
+  .field-name-field-operating-hours {
+    clear: both;
+  }
 }
 
-#ip-geoloc-map-of-view-clincs-clinic_map-7843f2d4b36a59915f1e8af69b80be71 {
-  height: 100vh !important;
+.is-false {
+  display: none;
+}
+
+.bus-number {
+  display: inline-block;
+  &:after {
+    content: '';
+    margin-right: 7px;
+  }
+}
+
+.addressfield-container-inline {
+  margin-bottom: rhythm(0.25);
+}
+
+.country {
+  display: none;
+}
+
+#toggle {
+  float: left;
+  margin-top: rhythm(0.5);
+;  cursor: pointer;
+  font-weight: bold;
+  color: color(pacific-blue);
+  &:hover {
+    color: darken(color(pacific-blue), 10%);
+  }
+}
+
+.distance {
+  float: right;
+  color: color(sunset-orange);
+  font-weight: bold;
+}
+
+.oh-current-closed {
+  color: red;
+}
+
+.oh-current-open {
+  color: green;
+}
+
+// Exposed filter
+select#edit-field-geofield-distance-unit {
+  display: none;
+}
+
+.geofield-proximity-origin-from:before {
+  content: 'kilometre(s)';
+  margin-right: 7px;
 }
 
 input#edit-field-geofield-distance-distance {
   width: 50px;
-}
-
-.leaflet-popup {
-  .addressfield-container-inline {
-    display: none;
-  }
 }

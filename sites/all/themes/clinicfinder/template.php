@@ -19,3 +19,20 @@ function clinicfinder_css_alter(&$css) {
 
   $css = array_diff_key($css, $exclude);
 }
+
+/*
+ * Implements template_preprocess_field()
+ */
+function clinicfinder_preprocess_field(&$vars) {
+  //check to see if the field is a boolean
+  if ($vars['element']['#field_type'] == 'list_boolean') {
+    //check to see if the value is TRUE
+    if ($vars['element']['#items'][0]['value'] == '1') {
+      //add the class .is-true
+      $vars['classes_array'][] = 'is-true';
+    } else {
+      //add the class .is-false
+      $vars['classes_array'][] = 'is-false';
+    }
+  }
+}
