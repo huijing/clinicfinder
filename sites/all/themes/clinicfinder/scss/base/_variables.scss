@@ -11,9 +11,30 @@
 // ==========
 
 // Imported fonts. 
+@font-face {
+  font-family: 'PT Sans';
+  src: url('../fonts/PTS55F.eot');
+  src: url('../fonts/PTS55F.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/PTS55F.woff2') format('woff2'),
+       url('../fonts/PTS55F.woff') format('woff'),
+       url('../fonts/PTS55F.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PT Sans';
+  src: url('../fonts/PTS75F.eot');
+  src: url('../fonts/PTS75F.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/PTS75F.woff2') format('woff2'),
+       url('../fonts/PTS75F.woff') format('woff'),
+       url('../fonts/PTS75F.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
 
 // Base font stacks
-$base-font: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+$base-font: "PT Sans", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 $header-font:'';
 $code-font:'';
 

@@ -29,10 +29,12 @@ span.geofield-proximity-origin-from,
 #block-ip-geoloc-geocode-address > div,
 #block-ip-geoloc-geocode-address > h2,
 form#ip-geoloc-geocode-address > div .form-item,
-#edit-fixed-address {
+#set-location-form .form-radios {
   display: inline-table;
 }
-#edit-fixed-address > .form-item-fixed-address {
+
+/* Note: #ids don't work well to target elements affected by AJAX */
+#set-location-form .form-radios > .form-item-fixed-address {
   padding-left: 2px;
   padding-right: 6px;
 }
@@ -42,3 +44,24 @@ form.ip-geoloc-address {
 textarea#edit-street-address {
   resize: horizontal; /* horizontal is not supported in many browsers */
 }
+
+/* Throbber from ctools module -- uncomment if you wish to use it over core's.
+#set-location-form .ajax-progress.ajax-progress-throbber {
+  background: white;
+  color: #555;
+  border: 1px solid #ccc;
+  display: inline-table;
+  width: 99%;
+}
+#set-location-form .ajax-progress.ajax-progress-throbber .throbber {
+  background: transparent url("../../ctools/images/throbber.gif") no-repeat center;
+  height: 35px;
+  width: 35px;
+  margin: 0;
+  padding: 1px;
+}
+#set-location-form .ajax-progress.ajax-progress-throbber .message {
+  margin-top: 8px;
+  white-space: nowrap;
+}
+*/

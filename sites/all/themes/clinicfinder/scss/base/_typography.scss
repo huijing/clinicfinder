@@ -12,6 +12,9 @@
 @include establish-baseline;
 $grid-background-baseline-height: $base-line-height;
 
+body {
+  font-family: $base-font;
+}
 // Standardise site-wide typography styles here. Refer to _variables.scss to edit the variables used in the type-scale mixin.
 %h1, h1 {
   @include responsive-text-size(kilo);
@@ -68,4 +71,8 @@ code {
 
 p {
   margin-bottom: rhythm(1);
+}
+
+a {
+  color: color(pacific-blue);
 }

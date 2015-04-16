@@ -7,13 +7,23 @@
  */
 
 (function ($) {
-  // Toggle for more clinic information
+  
   $(document).ready(function() {
-    $('.view-display-id-clinics .ds-bottom').hide();
-    $( ".view-display-id-clinics .ds-top" ).append( "<p id='toggle'>More</p>" );
+    // Move open/close indicator up the DOM
+    $('.view-display-id-clinics').find('.views-row').each(function(index, el) {
+      var appendLocation = $(el).find(".addressfield-container-inline");
+      $(el).find('.oh-current-open, .oh-current-closed').appendTo( appendLocation);
+    });
 
-    $('#toggle').bind('click',function(){
-      $(this).parent().next().toggleClass('reveal');
+    // Move home page text above the search bar
+    $('#views-exposed-form-clincs-clinics').appendTo('.panel-display');
+
+    // Toggle for more clinic information
+    $('.view-display-id-clinics .ds-bottom').hide();
+    $( ".view-display-id-clinics .ds-top" ).append( "<p class='toggle'>More</p>" );
+
+    $('.toggle').bind('click',function(){
+      $(this).parent().next().slideToggle();
     });
   });
 })(jQuery);

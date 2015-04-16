@@ -370,6 +370,18 @@ img {
   width: auto;
   /* IE8 */ }
 
+@font-face {
+  font-family: 'PT Sans';
+  src: url("../fonts/PTS55F.eot");
+  src: url("../fonts/PTS55F.eot?#iefix") format("embedded-opentype"), url("../fonts/PTS55F.woff2") format("woff2"), url("../fonts/PTS55F.woff") format("woff"), url("../fonts/PTS55F.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'PT Sans';
+  src: url("../fonts/PTS75F.eot");
+  src: url("../fonts/PTS75F.eot?#iefix") format("embedded-opentype"), url("../fonts/PTS75F.woff2") format("woff2"), url("../fonts/PTS75F.woff") format("woff"), url("../fonts/PTS75F.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal; }
 html {
   box-sizing: border-box; }
 
@@ -422,6 +434,9 @@ img {
 html {
   font-size: 100%;
   line-height: 1.5em; }
+
+body {
+  font-family: "PT Sans", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; }
 
 h1 {
   font-size: 26px;
@@ -529,6 +544,9 @@ code {
 
 p {
   margin-bottom: 1.5rem; }
+
+a {
+  color: #04afbf; }
 
 input[type=text]:not([type=submit]),
 input[type=email],
@@ -640,9 +658,22 @@ input::-ms-clear {
 .front .geofield-proximity-field-wrapper .form-item {
   width: 100%; }
 .front .views-widget-filter-field_geofield_distance {
-  width: 100%; }
+  width: auto; }
 .front .views-exposed-form .views-exposed-widget .form-submit {
   margin-top: 0; }
+
+.pane-custom {
+  color: white;
+  text-align: center; }
+
+.pane-title {
+  font-size: 60px;
+  margin-bottom: 0.5em;
+  font-weight: normal; }
+
+.pane-content {
+  font-size: 30px;
+  margin-bottom: 1em; }
 
 .dk-select,
 .dk-select *,
@@ -727,7 +758,7 @@ input::-ms-clear {
 .dk-option {
   background-color: #fff;
   border-bottom: 1px solid #999;
-  font-weight: bold;
+  font-weight: normal;
   padding: 8px 10px;
   margin: 0; }
 
@@ -852,6 +883,7 @@ select[data-dkcacheid] {
     width: calc(100% - 320px);
     float: right; }
   .view-display-id-clinics .views-row {
+    position: relative;
     border-bottom: 1px dashed gray;
     padding-bottom: 0.75rem;
     margin-bottom: 0.75rem; }
@@ -861,6 +893,9 @@ select[data-dkcacheid] {
       clear: both; }
     .view-display-id-clinics .views-row .field {
       margin-bottom: 0.375rem; }
+  .view-display-id-clinics .field-name-field-medical-scheme {
+    padding-top: 0.75rem;
+    clear: both; }
   .view-display-id-clinics .field-name-field-medical-scheme .field-label {
     overflow: hidden;
     text-indent: 100%;
@@ -870,7 +905,8 @@ select[data-dkcacheid] {
     display: inline-block;
     background-image: url("../img/medicalscheme.png");
     background-size: cover;
-    margin-right: 5px; }
+    margin-right: 5px;
+    margin-bottom: 10px; }
   .view-display-id-clinics .field-name-field-medical-scheme .field-item {
     display: inline-block;
     border: 1px solid gray;
@@ -907,6 +943,24 @@ select[data-dkcacheid] {
       background-image: url("../img/check.png");
       background-size: cover;
       margin-right: 5px; }
+  .view-display-id-clinics .field-name-field-phone {
+    overflow: hidden;
+    text-indent: 100%;
+    white-space: nowrap;
+    height: 24px;
+    width: 24px;
+    display: inline-block;
+    background-image: url("../img/phone.png");
+    background-size: cover;
+    margin-top: 0.375rem;
+    margin-right: 5px;
+    float: left;
+    clear: both; }
+  .view-display-id-clinics .field-name-field-nearest-mrt {
+    clear: both; }
+  .view-display-id-clinics .phone-number {
+    float: left;
+    margin-top: 0.375rem; }
   .view-display-id-clinics .field-name-field-operating-hours {
     clear: both; }
 
@@ -925,17 +979,19 @@ select[data-dkcacheid] {
 .country {
   display: none; }
 
-#toggle {
+.toggle {
   float: left;
-  margin-top: 0.75rem;
+  clear: both;
+  margin-top: 0.375rem;
   cursor: pointer;
-  font-weight: bold;
   color: #04afbf; }
-  #toggle:hover {
+  .toggle:hover {
     color: #03818d; }
 
 .distance {
-  float: right;
+  position: absolute;
+  bottom: 35px;
+  right: 0;
   color: #ff523a;
   font-weight: bold; }
 
@@ -945,12 +1001,63 @@ select[data-dkcacheid] {
 .oh-current-open {
   color: green; }
 
-select#edit-field-geofield-distance-unit {
+.not-front .views-exposed-form {
+  float: none;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0.75rem 0;
+  width: 1230px; }
+.not-front select#edit-field-geofield-distance-unit {
   display: none; }
-
-.geofield-proximity-origin-from:before {
+.not-front .geofield-proximity-origin-from:before {
   content: 'kilometre(s)';
   margin-right: 7px; }
-
-input#edit-field-geofield-distance-distance {
+.not-front input#edit-field-geofield-distance-distance {
   width: 50px; }
+.not-front #edit-field-geofield-distance-origin {
+  width: 300px; }
+.not-front #edit-field-medical-scheme-tid-wrapper {
+  margin-top: 1.5rem; }
+.not-front #edit-field-24-hours-value-wrapper,
+.not-front #edit-field-public-holidays-value-wrapper {
+  margin-top: 2.25rem; }
+
+.site-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: white; }
+
+.region-footer {
+  border-top: 1px solid #f2f2f2; }
+
+#block-block-1 {
+  float: none;
+  margin-left: auto;
+  margin-right: auto;
+  width: 730px;
+  padding: 0.75rem; }
+  #block-block-1:after {
+    content: "";
+    display: table;
+    clear: both; }
+
+input[type=text].paypal-input {
+  width: 65px;
+  margin-left: 10px;
+  text-align: center;
+  height: 2em; }
+
+.footer-text {
+  display: inline; }
+
+.paypal-button {
+  margin-left: 0.375rem;
+  display: inline; }
+
+.page {
+  min-width: 1280px; }
+
+.site-header {
+  border-bottom: 1px solid #f2f2f2; }

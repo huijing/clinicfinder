@@ -21,6 +21,7 @@
     float: right;
   }
   .views-row {
+    position: relative;
     @include cf;
     border-bottom: 1px dashed gray;
     padding-bottom: rhythm(0.5);
@@ -28,6 +29,10 @@
     .field {
       margin-bottom: rhythm(0.25);
     }
+  }
+  .field-name-field-medical-scheme {
+    padding-top: rhythm(0.5);
+    clear: both;
   }
   .field-name-field-medical-scheme .field-label {
     @include image-replacement;
@@ -37,6 +42,7 @@
     background-image: url('../img/medicalscheme.png');
     background-size: cover;
     margin-right: 5px;
+    margin-bottom: 10px;
   }
   .field-name-field-medical-scheme .field-item {
     display: inline-block;
@@ -76,6 +82,25 @@
       margin-right: 5px;
     }
   }
+  .field-name-field-phone {
+    @include image-replacement;
+    height: 24px;
+    width: 24px;
+    display: inline-block;
+    background-image: url('../img/phone.png');
+    background-size: cover;
+    margin-top: rhythm(0.25);
+    margin-right: 5px;
+    float: left;
+    clear: both;
+  }
+  .field-name-field-nearest-mrt {
+    clear: both;
+  }
+  .phone-number {
+    float: left;
+    margin-top: rhythm(0.25);
+  }
   .field-name-field-operating-hours {
     clear: both;
   }
@@ -101,11 +126,11 @@
   display: none;
 }
 
-#toggle {
+.toggle {
   float: left;
-  margin-top: rhythm(0.5);
-;  cursor: pointer;
-  font-weight: bold;
+  clear: both;
+  margin-top: rhythm(0.25);
+  cursor: pointer;
   color: color(pacific-blue);
   &:hover {
     color: darken(color(pacific-blue), 10%);
@@ -113,7 +138,9 @@
 }
 
 .distance {
-  float: right;
+  position: absolute;
+  bottom: 35px;
+  right: 0;
   color: color(sunset-orange);
   font-weight: bold;
 }
@@ -127,15 +154,36 @@
 }
 
 // Exposed filter
-select#edit-field-geofield-distance-unit {
-  display: none;
-}
+.not-front {
+  .views-exposed-form {
+    @include center;
+    padding: rhythm(0.5) 0;
+    width: 1230px;
 
-.geofield-proximity-origin-from:before {
-  content: 'kilometre(s)';
-  margin-right: 7px;
-}
+  }
+  select#edit-field-geofield-distance-unit {
+    display: none;
+  }
 
-input#edit-field-geofield-distance-distance {
-  width: 50px;
+  .geofield-proximity-origin-from:before {
+    content: 'kilometre(s)';
+    margin-right: 7px;
+  }
+
+  input#edit-field-geofield-distance-distance {
+    width: 50px;
+  }
+
+  #edit-field-geofield-distance-origin {
+    width: 300px;
+  }
+
+  #edit-field-medical-scheme-tid-wrapper {
+    margin-top: rhythm(1);
+  }
+
+  #edit-field-24-hours-value-wrapper,
+  #edit-field-public-holidays-value-wrapper {
+    margin-top: rhythm(1.5);
+  }
 }

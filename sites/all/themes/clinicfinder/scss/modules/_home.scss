@@ -33,9 +33,25 @@
     width: 100%;
   }
   .views-widget-filter-field_geofield_distance {
-    width: 100%;
+    width: auto;
   }
   .views-exposed-form .views-exposed-widget .form-submit {
     margin-top: 0;
   }
+}
+
+.pane-custom {
+  color: white;
+  text-align: center;
+}
+
+.pane-title {
+  font-size: 60px;
+  margin-bottom: 0.5em;
+  font-weight: normal;
+}
+
+.pane-content {
+  font-size: 30px;
+  margin-bottom: 1em;
 }
